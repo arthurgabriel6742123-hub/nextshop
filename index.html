@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine Cósmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="#" class="logo">🌌 Vitrine Cósmica</a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button id="botao-carrinho">
+            🛒 Carrinho (<span id="quantidade-carrinho">0</span>)
+        </button>
+    </header>
+
+    <main>
+        <section class="banner" id="inicio">
+            <div class="conteudo-banner">
+                <p class="destaque">EXPLORE NOVAS POSSIBILIDADES</p>
+                <h1>Seu próximo universo começa aqui.</h1>
+                <p>Tecnologia, acessórios e descobertas esperando por você.</p>
+                <a href="#produtos" class="botao-principal">
+                    Explorar produtos
+                </a>
+            </div>
+        </section>
+
+        <section class="produtos" id="produtos">
+            <h2>Explore nossa galáxia de produtos</h2>
+            <p class="subtitulo">
+                Mais de 1.200 descobertas esperando por você!
+            </p>
+
+            <div class="filtros">
+                <input type="search" id="busca"
+                    placeholder="Buscar produto...">
+
+                <select id="categoria">
+                    <option value="Todas">Todas as categorias</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Games">Games</option>
+                    <option value="Acessórios">Acessórios</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Moda">Moda</option>
+                </select>
+            </div>
+
+            <p id="resultado-busca" aria-live="polite"></p>
+            <div class="grade-produtos" id="grade-produtos"></div>
+            <div class="paginacao" id="paginacao"></div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h2>Um universo de descobertas</h2>
+            <p>Explore produtos para o seu dia a dia.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Vitrine Cósmica</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

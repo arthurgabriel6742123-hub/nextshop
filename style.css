@@ -1,0 +1,334 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080817;
+    color: #fff;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho {
+    min-height: 70px;
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: #101027;
+    border-bottom: 1px solid #30205a;
+}
+
+.logo {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #c7a5ff;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #dddaf5;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #c084fc;
+}
+
+button,
+.botao-principal {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #7c3aed, #c026d3);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.banner {
+    min-height: 310px;
+    padding: 45px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #080817 5%, #080817e8 48%, #08081755),
+        url("vitrine-cosmica.png") center / cover no-repeat;
+}
+
+.conteudo-banner {
+    max-width: 490px;
+}
+
+.destaque {
+    color: #d8b4fe;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.banner h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.12;
+    margin-bottom: 14px;
+}
+
+.banner p:not(.destaque) {
+    color: #d2d0e8;
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+}
+
+.botao-principal {
+    display: inline-block;
+}
+
+.produtos,
+.sobre {
+    padding: 42px 6%;
+    text-align: center;
+}
+
+.produtos h2,
+.sobre h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-bottom: 8px;
+}
+
+.subtitulo,
+.sobre p {
+    color: #b8b5d3;
+    font-size: 0.95rem;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: 26px auto 0;
+}
+
+.cartao-produto {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #30205a;
+    border-radius: 12px;
+    background: #111127;
+    text-align: left;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.cartao-produto:hover {
+    transform: translateY(-3px);
+    border-color: #a855f7;
+}
+
+.icone-produto {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.cartao-produto h3 {
+    font-size: 1.05rem;
+    margin-bottom: 7px;
+}
+
+.cartao-produto p {
+    color: #b8b5d3;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.preco {
+    display: block;
+    color: #d8b4fe;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.cartao-produto button {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.sobre {
+    background: #101027;
+}
+
+footer {
+    padding: 18px;
+    text-align: center;
+    color: #aaa6c9;
+    font-size: 0.85rem;
+    border-top: 1px solid #30205a;
+}
+
+@media (max-width: 750px) {
+    .cabecalho {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .banner {
+        min-height: 280px;
+        padding: 35px 6%;
+        background-position: center;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos,
+    .sobre {
+        padding: 32px 20px;
+    }
+}
+
+/* Mais espaço e conforto no layout */
+
+.cabecalho {
+    padding: 22px 6%;
+    gap: 28px;
+}
+
+nav {
+    gap: 28px;
+}
+
+.banner {
+    min-height: 380px;
+    padding: 60px 8%;
+}
+
+.conteudo-banner {
+    max-width: 540px;
+}
+
+.banner h1 {
+    margin-bottom: 22px;
+}
+
+.banner p:not(.destaque) {
+    margin-bottom: 30px;
+}
+
+.produtos,
+.sobre {
+    padding: 60px 7%;
+}
+
+.grade-produtos {
+    gap: 26px;
+    margin-top: 36px;
+}
+
+.cartao-produto {
+    padding: 26px;
+}
+
+.cartao-produto h3 {
+    margin-bottom: 12px;
+}
+
+.cartao-produto p {
+    margin-bottom: 18px;
+}
+
+.preco {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 26px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 25px auto 15px;
+}
+
+.filtros input,
+.filtros select {
+    min-width: 220px;
+    padding: 12px;
+    border: 1px solid #49336f;
+    border-radius: 8px;
+    background: #111127;
+    color: white;
+    font-size: 1rem;
+}
+
+#resultado-busca {
+    color: #c7a5ff;
+    margin: 16px 0;
+}
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.paginacao button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros input,
+    .filtros select {
+        width: 100%;
+        min-width: 0;
+    }
+}
